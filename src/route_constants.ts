@@ -1,1 +1,1 @@
-export const MatchTheFirstLetter = 'match-the-first-letter-of-the-picture-with-a-vowel'
+export const ROUTE_MATCH_FIRST_LETTER = '/match-the-first-letter-of-the-picture-with-a-vowel'

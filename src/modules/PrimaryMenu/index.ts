@@ -1,1 +1,1 @@
-export { default } from 'modules/PrimaryMenu/PrimaryMenu';
+export { default } from './PrimaryMenu';
