@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "components": [
+        "components/index"
+      ]
+    },
     "target": "es5",
     "lib": [
       "dom",
