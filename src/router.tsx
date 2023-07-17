@@ -1,6 +1,6 @@
 import {lazy, Suspense} from "react";
 import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
-import {ROUTE_MATCH_FIRST_LETTER} from "route_constants";
+import {ROUTE_MATCH_FIRST_LETTER} from "constants/route_constants";
 
 const App = lazy(() => import('modules/App'));
 const PrimaryMenu = lazy(() => import('modules/PrimaryMenu'));

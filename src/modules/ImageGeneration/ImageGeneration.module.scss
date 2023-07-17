@@ -1,0 +1,21 @@
+.resultImage {
+  display: grid;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.arrowWrapper {
+  display: grid;
+  justify-content: center;
+}

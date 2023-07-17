@@ -1,15 +1,17 @@
 import React from 'react';
+import styles from './MatchFirstLetter.module.scss'
+import {VOWELS} from "constants/contants";
+import ImageGeneration from "modules/ImageGeneration/ImageGeneration";
 
-type MatchFirstLetterProps = {
-    test?: any;
-}
+const MatchFirstLetter: React.FC = (props) => {
 
-const MatchFirstLetter: React.FC<MatchFirstLetterProps> = (props) => {
     return (
-        <div>
-            MatchFirstLetter
+        <div className={styles.matchFirstLetter}>
+            <div className={styles.vowelsWrapper}>
+                {VOWELS.map((vowel) => <div key={vowel} className={styles.vowel}>{vowel}</div>)}
+            </div>
+            <ImageGeneration/>
         </div>
     );
-};
-
+}
 export default MatchFirstLetter;

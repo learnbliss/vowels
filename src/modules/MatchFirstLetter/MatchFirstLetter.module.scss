@@ -1,0 +1,25 @@
+.matchFirstLetter {
+  display: grid;
+  grid-template-rows: auto auto;
+  height: 100%;
+  align-content: space-around;
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+.vowelsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  font-size: 50px;
+  width: 100%;
+  color: var(--color_red);
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.vowel {
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+}
