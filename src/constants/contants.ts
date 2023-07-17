@@ -14,7 +14,7 @@ export const DICTIONARY_FIRST_VOWELS = [
     {eng: 'airplane', ru: 'аэроплан'},
     {eng: 'orange', ru: 'апельсин'},
     {eng: 'aloe', ru: 'алоэ'},
-    {eng: 'machine', ru: 'автомат'},
+    {eng: 'ak47', ru: 'автомат'},
     {eng: 'bus', ru: 'автобус'},
     {eng: 'iceberg', ru: 'айсберг'},
     {eng: 'antelope', ru: 'антилопа'},

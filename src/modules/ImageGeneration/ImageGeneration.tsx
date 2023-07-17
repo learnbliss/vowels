@@ -3,7 +3,6 @@ import {getRandomItem} from "helpers/getRandomItem";
 import {DICTIONARY_FIRST_VOWELS} from "constants/contants";
 import styles from './ImageGeneration.module.scss'
 import Loader from "components/Loader";
-import Button from "components/Button";
 import {DictionaryFirstVowelsType} from "types/generateImage";
 import {fetchImageFromWord} from "core/api_fetch/fetchImage";
 import Arrow from "components/Arrow";
@@ -13,8 +12,7 @@ const ImageGeneration: FC = () => {
     const [words, setWords] = useState<DictionaryFirstVowelsType>(getRandomItem(DICTIONARY_FIRST_VOWELS));
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    // const targetWords = getRandomItem(DICTIONARY_FIRST_VOWELS)
-    useEffect(() => {
+    const handleGetImage = () => {
         const targetWords = getRandomItem(DICTIONARY_FIRST_VOWELS);
         setIsLoading(true)
         fetchImageFromWord(words.eng).then((res) => {
@@ -22,6 +20,10 @@ const ImageGeneration: FC = () => {
             setWords(targetWords)
             setIsLoading(false)
         })
+    }
+
+    useEffect(() => {
+        handleGetImage()
     }, []);
 
     return (
@@ -33,7 +35,7 @@ const ImageGeneration: FC = () => {
                             <img className={styles.img} src={output} alt="art"/>
                         </div>
                     )}
-                    <div className={styles.arrowWrapper}><Arrow/></div>
+                    <div onClick={handleGetImage} className={styles.arrowWrapper}><Arrow/></div>
                 </>
             }
         </>
