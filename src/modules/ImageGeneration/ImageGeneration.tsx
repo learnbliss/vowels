@@ -3,23 +3,26 @@ import {getRandomItem} from "helpers/getRandomItem";
 import {DICTIONARY_FIRST_VOWELS} from "constants/contants";
 import styles from './ImageGeneration.module.scss'
 import Loader from "components/Loader";
-import {DictionaryFirstVowelsType} from "types/generateImage";
 import {fetchImageFromWord} from "core/api_fetch/fetchImage";
 import Arrow from "components/Arrow";
+import {useAppDispatch} from "redux/hooks";
+import {setLetter} from "core/matchFirstLetter/matchFirstLetterSlice";
 
 const ImageGeneration: FC = () => {
+    const dispatch = useAppDispatch();
+
     const [output, setOutput] = useState<string | undefined>();
-    const [words, setWords] = useState<DictionaryFirstVowelsType>(getRandomItem(DICTIONARY_FIRST_VOWELS));
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleGetImage = () => {
         const targetWords = getRandomItem(DICTIONARY_FIRST_VOWELS);
         setIsLoading(true)
-        fetchImageFromWord(words.eng).then((res) => {
+        fetchImageFromWord(targetWords.eng).then((res) => {
             setOutput(res)
-            setWords(targetWords)
             setIsLoading(false)
         })
+        const letter = targetWords.ru.charAt(0).toLowerCase();
+        dispatch(setLetter(letter))
     }
 
     useEffect(() => {
