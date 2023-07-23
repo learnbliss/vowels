@@ -5,15 +5,15 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding-top: 1rem;
   align-items: center;
 }
 
 .img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  object-fit: contain;
+  position: absolute;
+  border-radius: 20px;
 }
 
 .arrowWrapper {
@@ -23,7 +23,7 @@
 
 .imgName {
   position: absolute;
-  top: -0.5rem;
+  top: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.3rem;
