@@ -8,7 +8,6 @@ import Arrow from "components/Arrow";
 import {useAppDispatch, useAppSelector} from "redux/hooks";
 import {setRightAnswerLetter, setTargetWord} from "core/matchFirstLetter/matchFirstLetterSlice";
 import {matchFirstLetterSelector} from "core/matchFirstLetter/matchFirstLetterSelectors";
-import {getFirstLowerCaseLetter} from "helpers/commonHelpers";
 import {useSpeech} from "hooks/useSpeech";
 
 const ImageGeneration: FC = () => {
@@ -51,7 +50,9 @@ const ImageGeneration: FC = () => {
                 </>}
             </div>
             {error && <div>Ошибка загрузки</div>}
-            <div onClick={handleGetImage} className={styles.arrowWrapper}><Arrow/></div>
+            <div onClick={handleGetImage} className={styles.arrowWrapper}>
+               <Arrow/>
+            </div>
             {isLoading && <div className={styles.block}/>}
         </>
     );

@@ -4,12 +4,13 @@
   height: 100%;
   background: linear-gradient(rgba(135, 60, 255, 0.4), rgba(135, 60, 255, 0.0) 80%),
   linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(255, 160, 65, 0.9) 75%);
-
+  max-height: 100%;
+  overflow: auto;
 }
 
 .secondaryContainer {
   max-width: 984px;
   margin: 0 auto;
-  padding: var(--default_padding);
   height: 100%;
+  padding: 0 var(--default_padding);
 }

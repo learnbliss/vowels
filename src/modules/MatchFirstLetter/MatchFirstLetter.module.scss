@@ -1,7 +1,7 @@
 .matchFirstLetter {
   display: grid;
-  grid-template-rows: auto auto;
-  height: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
   align-content: space-around;
   grid-gap: 1rem;
   width: 100%;
@@ -15,6 +15,7 @@
   color: var(--color_red);
   column-gap: 3rem;
   row-gap: 2rem;
+  padding: 1rem 0 0;
 }
 
 .vowel {
@@ -36,12 +37,21 @@
 
 .rightAnswer {
   position: fixed;
-  font-size: 500px;
+  font-size: 50vw;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 5;
   transition: all, .5s;
-  background: rgba(1,1,1, .8);
+  background: rgba(1, 1, 1, .8);
+  display: grid;
+  align-content: center;
+}
+
+@media all and (max-width: 590px) {
+  .vowelsWrapper {
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
 }

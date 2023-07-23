@@ -21,6 +21,7 @@ const MatchFirstLetter: React.FC = () => {
     const {handleSpeech} = useSpeech(isEndSpeech);
 
     const handleClick = (vowel: string) => {
+        if (rightAnswerLetter) return;
         const vowelLetter = getFirstLowerCaseLetter(vowel)
         const targetLetter = getFirstLowerCaseLetter(targetWord)
 
