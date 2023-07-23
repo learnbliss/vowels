@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/vowels/static/css/main.f74617d5.css",
+    "main.js": "/vowels/static/js/main.633ce995.js",
+    "static/css/373.c2cac860.chunk.css": "/vowels/static/css/373.c2cac860.chunk.css",
+    "static/js/373.db3b5a78.chunk.js": "/vowels/static/js/373.db3b5a78.chunk.js",
+    "static/css/519.bcc28c13.chunk.css": "/vowels/static/css/519.bcc28c13.chunk.css",
+    "static/js/519.1138ab0d.chunk.js": "/vowels/static/js/519.1138ab0d.chunk.js",
+    "static/css/465.8c9a6e9a.chunk.css": "/vowels/static/css/465.8c9a6e9a.chunk.css",
+    "static/js/465.827bd336.chunk.js": "/vowels/static/js/465.827bd336.chunk.js",
+    "static/js/787.81662415.chunk.js": "/vowels/static/js/787.81662415.chunk.js",
+    "index.html": "/vowels/index.html",
+    "main.f74617d5.css.map": "/vowels/static/css/main.f74617d5.css.map",
+    "main.633ce995.js.map": "/vowels/static/js/main.633ce995.js.map",
+    "373.c2cac860.chunk.css.map": "/vowels/static/css/373.c2cac860.chunk.css.map",
+    "373.db3b5a78.chunk.js.map": "/vowels/static/js/373.db3b5a78.chunk.js.map",
+    "519.bcc28c13.chunk.css.map": "/vowels/static/css/519.bcc28c13.chunk.css.map",
+    "519.1138ab0d.chunk.js.map": "/vowels/static/js/519.1138ab0d.chunk.js.map",
+    "465.8c9a6e9a.chunk.css.map": "/vowels/static/css/465.8c9a6e9a.chunk.css.map",
+    "465.827bd336.chunk.js.map": "/vowels/static/js/465.827bd336.chunk.js.map",
+    "787.81662415.chunk.js.map": "/vowels/static/js/787.81662415.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f74617d5.css",
+    "static/js/main.633ce995.js"
+  ]
+}
