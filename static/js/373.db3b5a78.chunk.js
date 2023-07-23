@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfor_alisa=self.webpackChunkfor_alisa||[]).push([[373],{373:function(n,r,a){a.r(r),a.d(r,{default:function(){return c}});a(791);var e="App_primaryContainer__Ho42U",i="App_secondaryContainer__Hfezx",s=a(184),c=function(n){var r=n.children;return(0,s.jsx)("div",{className:e,children:(0,s.jsx)("div",{className:i,children:r})})}}}]);
-//# sourceMappingURL=373.db3b5a78.chunk.js.map
