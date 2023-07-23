@@ -1,27 +1,52 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './MatchFirstLetter.module.scss'
 import {VOWELS} from "constants/contants";
 import ImageGeneration from "modules/ImageGeneration/ImageGeneration";
 import {matchFirstLetterSelector} from "core/matchFirstLetter/matchFirstLetterSelectors";
-import {useAppSelector} from "redux/hooks";
+import {useAppDispatch, useAppSelector} from "redux/hooks";
+import {getFirstLowerCaseLetter} from "helpers/commonHelpers";
+import {useSpeech} from "hooks/useSpeech";
+import {setRightAnswerLetter, setTargetWord} from "core/matchFirstLetter/matchFirstLetterSlice";
+import cx from 'classnames';
+
 
 const MatchFirstLetter: React.FC = () => {
-    const {letter} = useAppSelector(matchFirstLetterSelector)
+    const {targetWord, rightAnswerLetter} = useAppSelector(matchFirstLetterSelector)
+    const dispatch = useAppDispatch();
+
+    const isEndSpeech = () => {
+        dispatch(setRightAnswerLetter(''));
+    }
+
+    const {handleSpeech} = useSpeech(isEndSpeech);
 
     const handleClick = (vowel: string) => {
+        const vowelLetter = getFirstLowerCaseLetter(vowel)
+        const targetLetter = getFirstLowerCaseLetter(targetWord)
 
-        const targetLetter = vowel.charAt(0).toLowerCase();
-        if (targetLetter === letter) {
-            console.log('correct')
+        if (vowelLetter === targetLetter) {
+            handleSpeech(`правильно, это, ${targetLetter}, ${targetWord}!`)
+            dispatch(setTargetWord(''))
+            dispatch(setRightAnswerLetter(targetLetter))
         } else {
-            console.log('wrong')
+            handleSpeech(`${vowelLetter}, неправильно`)
         }
     }
+
+    useEffect(() => {
+
+    }, []); //eslint-disable-line
 
     return (
         <div className={styles.matchFirstLetter}>
             <div className={styles.vowelsWrapper}>
-                {VOWELS.map((vowel) => <div onClick={() => handleClick(vowel)} key={vowel} className={styles.vowel}>{vowel}</div>)}
+                {VOWELS.map((vowel) =>
+                    (<div onClick={() => handleClick(vowel)} key={vowel}>
+                        <div
+                            className={cx(styles.vowel, {[styles.rightAnswer]: rightAnswerLetter === getFirstLowerCaseLetter(vowel)})}>
+                            {vowel}</div>
+                    </div>)
+                )}
             </div>
             <ImageGeneration/>
         </div>

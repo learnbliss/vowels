@@ -19,7 +19,29 @@
 
 .vowel {
   padding: 5px;
-  border: 1px solid black;
+  box-shadow: 0 0 30px 10px rgba(128, 0, 128, 0.2) inset;
   text-align: center;
   border-radius: 5px;
+  background: white;
+}
+
+.blockPage {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(1, 1, 1, .6);
+}
+
+.rightAnswer {
+  position: fixed;
+  font-size: 500px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  transition: all, .5s;
+  background: rgba(1,1,1, .8);
 }

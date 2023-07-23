@@ -1,23 +1,28 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 
 export type matchFirstLetterState = {
-    letter: string
+    targetWord: string;
+    rightAnswerLetter: string;
 }
 
 const initialState: matchFirstLetterState = {
-    letter: '',
+    targetWord: '',
+    rightAnswerLetter: '',
 }
 
 export const matchFirstLetterSlice = createSlice({
     name: 'matchFirstLetter',
     initialState,
     reducers: {
-        setLetter: (state, action: PayloadAction<string>) => {
-            state.letter = action.payload
+        setTargetWord: (state, action: PayloadAction<string>) => {
+            state.targetWord = action.payload
+        },
+        setRightAnswerLetter: (state, action: PayloadAction<string>) => {
+            state.rightAnswerLetter = action.payload;
         }
     }
 })
 
-export const {setLetter} = matchFirstLetterSlice.actions
+export const {setTargetWord, setRightAnswerLetter} = matchFirstLetterSlice.actions
 
 export default matchFirstLetterSlice.reducer

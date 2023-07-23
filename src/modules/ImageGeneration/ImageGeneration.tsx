@@ -1,46 +1,58 @@
-import React, {FC, useEffect, useState} from "react";
+import React, {FC, useEffect, useMemo, useState} from "react";
 import {getRandomItem} from "helpers/getRandomItem";
 import {DICTIONARY_FIRST_VOWELS} from "constants/contants";
 import styles from './ImageGeneration.module.scss'
 import Loader from "components/Loader";
 import {fetchImageFromWord} from "core/api_fetch/fetchImage";
 import Arrow from "components/Arrow";
-import {useAppDispatch} from "redux/hooks";
-import {setLetter} from "core/matchFirstLetter/matchFirstLetterSlice";
+import {useAppDispatch, useAppSelector} from "redux/hooks";
+import {setRightAnswerLetter, setTargetWord} from "core/matchFirstLetter/matchFirstLetterSlice";
+import {matchFirstLetterSelector} from "core/matchFirstLetter/matchFirstLetterSelectors";
+import {getFirstLowerCaseLetter} from "helpers/commonHelpers";
+import {useSpeech} from "hooks/useSpeech";
 
 const ImageGeneration: FC = () => {
     const dispatch = useAppDispatch();
+    const {targetWord, rightAnswerLetter} = useAppSelector(matchFirstLetterSelector)
 
     const [output, setOutput] = useState<string | undefined>();
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState(false);
 
     const handleGetImage = () => {
-        const targetWords = getRandomItem(DICTIONARY_FIRST_VOWELS);
+        if (isLoading) return;
+        dispatch(setRightAnswerLetter(''))
+        const words = getRandomItem(DICTIONARY_FIRST_VOWELS);
         setIsLoading(true)
-        fetchImageFromWord(targetWords.eng).then((res) => {
+        setOutput(undefined)
+        fetchImageFromWord(words.eng).then((res) => {
             setOutput(res)
             setIsLoading(false)
         })
-        const letter = targetWords.ru.charAt(0).toLowerCase();
-        dispatch(setLetter(letter))
+        const word = words.ru;
+        dispatch(setTargetWord(word))
     }
 
+    const imgName = `...${targetWord.substring(1)}`;
+
     useEffect(() => {
-        handleGetImage()
-    }, []);
+        !rightAnswerLetter && handleGetImage();
+    }, [rightAnswerLetter]);
+
+    const {handleSpeech} = useSpeech();
 
     return (
         <>
-            {isLoading ? <Loader/>
-                : <>
-                    {output && (
-                        <div className={styles.resultImage}>
-                            <img className={styles.img} src={output} alt="art"/>
-                        </div>
-                    )}
-                    <div onClick={handleGetImage} className={styles.arrowWrapper}><Arrow/></div>
-                </>
-            }
+            <div className={styles.resultImage}>
+                {isLoading && <Loader/>}
+                {output && <>
+                    <div className={styles.imgName}>{imgName}</div>
+                    <img onClick={() => handleSpeech(targetWord)} className={styles.img} src={output} alt="art"/>
+                </>}
+            </div>
+            {error && <div>Ошибка загрузки</div>}
+            <div onClick={handleGetImage} className={styles.arrowWrapper}><Arrow/></div>
+            {isLoading && <div className={styles.block}/>}
         </>
     );
 };
