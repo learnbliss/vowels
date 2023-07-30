@@ -19,12 +19,16 @@ export const useSpeech = (handleSpeechEnd?: () => void) => {
 
 
     const handleSpeech = (text: string) => {
+        console.log('text:', text)
         if (voice && synth) {
             voice.rate = 0.9
+            voice.lang = 'ru-RU';
             synth.cancel();
             voice.text = text;
             synth.speak(voice);
         }
     }
+    // @ts-ignore
+    window.handleSpeech = handleSpeech;
     return {handleSpeech}
 }

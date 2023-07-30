@@ -36,7 +36,7 @@ export const DICTIONARY_FIRST_VOWELS = [
     {eng: 'oriole', ru: 'иволга'},
     {eng: 'weeping willow tree', ru: 'ива'},
     {eng: 'raisin', ru: 'изюм'},
-    {eng: 'eagle', ru: 'орел'},
+    {eng: 'eagle', ru: 'орёл'},
     {eng: 'donkey', ru: 'ослик'},
     {eng: 'lamb', ru: 'овечка'},
     {eng: 'light', ru: 'огонек'},

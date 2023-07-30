@@ -18,18 +18,25 @@ const ImageGeneration: FC = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState(false);
 
-    const handleGetImage = () => {
+    const handleGetImage = async () => {
         if (isLoading) return;
         dispatch(setRightAnswerLetter(''))
-        const words = getRandomItem(DICTIONARY_FIRST_VOWELS);
+        // const words = getRandomItem(DICTIONARY_FIRST_VOWELS);
+        const words = {eng: 'donkey', ru: 'ослик'}; //для теста конкретного слова
         setIsLoading(true)
         setOutput(undefined)
-        fetchImageFromWord(words.eng).then((res) => {
-            setOutput(res)
-            setIsLoading(false)
-        })
-        const word = words.ru;
-        dispatch(setTargetWord(word))
+        try {
+            const response = await fetchImageFromWord(words.eng)
+            setError(false)
+            setIsLoading(false);
+            setOutput(response);
+            const word = words.ru;
+            dispatch(setTargetWord(word))
+        } catch (e) {
+            setIsLoading(false);
+            setError(true)
+            console.error('fetchImageFromWord, ошибка загрузки изображения')
+        }
     }
 
     const imgName = `...${targetWord.substring(1)}`;
@@ -48,8 +55,8 @@ const ImageGeneration: FC = () => {
                     <div className={styles.imgName}>{imgName}</div>
                     <img onClick={() => handleSpeech(targetWord)} className={styles.img} src={output} alt="art"/>
                 </>}
+                {error && <div>Ошибка загрузки, возможно не работает интернет</div>}
             </div>
-            {error && <div>Ошибка загрузки</div>}
             <div onClick={handleGetImage} className={styles.arrowWrapper}>
                <Arrow/>
             </div>

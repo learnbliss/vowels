@@ -1,7 +1,6 @@
 const API_TOKEN = "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";
 
 export const fetchImageFromWord = async (word: string) => {
-    try {
         const response = await fetch(
             "https://api-inference.huggingface.co/models/prompthero/openjourney",
             {
@@ -15,7 +14,4 @@ export const fetchImageFromWord = async (word: string) => {
         );
         const blob = await response.blob();
         return URL.createObjectURL(blob)
-    } catch (e) {
-        console.error(e)
-    }
 };

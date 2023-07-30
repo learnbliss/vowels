@@ -26,7 +26,8 @@ const MatchFirstLetter: React.FC = () => {
         const targetLetter = getFirstLowerCaseLetter(targetWord)
 
         if (vowelLetter === targetLetter) {
-            handleSpeech(`правильно, это, ${targetLetter}, ${targetWord}!`)
+            console.log('targetLetter:', targetLetter)
+            handleSpeech(`правильно, это... ${targetLetter.toUpperCase()}...! ;${targetWord}`);
             dispatch(setTargetWord(''))
             dispatch(setRightAnswerLetter(targetLetter))
         } else {
