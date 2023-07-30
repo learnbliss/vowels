@@ -21,8 +21,8 @@ const ImageGeneration: FC = () => {
     const handleGetImage = async () => {
         if (isLoading) return;
         dispatch(setRightAnswerLetter(''))
-        // const words = getRandomItem(DICTIONARY_FIRST_VOWELS);
-        const words = {eng: 'donkey', ru: 'ослик'}; //для теста конкретного слова
+        const words = getRandomItem(DICTIONARY_FIRST_VOWELS);
+        // const words = {eng: 'donkey', ru: 'ослик'}; //для теста конкретного слова
         setIsLoading(true)
         setOutput(undefined)
         try {
