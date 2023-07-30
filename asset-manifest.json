@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/vowels/static/css/main.db079e9d.css",
-    "main.js": "/vowels/static/js/main.6af75ede.js",
+    "main.js": "/vowels/static/js/main.69098798.js",
     "static/css/373.b4a7d865.chunk.css": "/vowels/static/css/373.b4a7d865.chunk.css",
     "static/js/373.1a369e72.chunk.js": "/vowels/static/js/373.1a369e72.chunk.js",
     "static/css/519.bcc28c13.chunk.css": "/vowels/static/css/519.bcc28c13.chunk.css",
     "static/js/519.4e402967.chunk.js": "/vowels/static/js/519.4e402967.chunk.js",
-    "static/css/465.7fa3748a.chunk.css": "/vowels/static/css/465.7fa3748a.chunk.css",
-    "static/js/465.0d03775b.chunk.js": "/vowels/static/js/465.0d03775b.chunk.js",
+    "static/css/238.21b615c2.chunk.css": "/vowels/static/css/238.21b615c2.chunk.css",
+    "static/js/238.851bf73f.chunk.js": "/vowels/static/js/238.851bf73f.chunk.js",
     "static/js/787.3beb7f7f.chunk.js": "/vowels/static/js/787.3beb7f7f.chunk.js",
     "index.html": "/vowels/index.html",
     "main.db079e9d.css.map": "/vowels/static/css/main.db079e9d.css.map",
-    "main.6af75ede.js.map": "/vowels/static/js/main.6af75ede.js.map",
+    "main.69098798.js.map": "/vowels/static/js/main.69098798.js.map",
     "373.b4a7d865.chunk.css.map": "/vowels/static/css/373.b4a7d865.chunk.css.map",
     "373.1a369e72.chunk.js.map": "/vowels/static/js/373.1a369e72.chunk.js.map",
     "519.bcc28c13.chunk.css.map": "/vowels/static/css/519.bcc28c13.chunk.css.map",
     "519.4e402967.chunk.js.map": "/vowels/static/js/519.4e402967.chunk.js.map",
-    "465.7fa3748a.chunk.css.map": "/vowels/static/css/465.7fa3748a.chunk.css.map",
-    "465.0d03775b.chunk.js.map": "/vowels/static/js/465.0d03775b.chunk.js.map",
+    "238.21b615c2.chunk.css.map": "/vowels/static/css/238.21b615c2.chunk.css.map",
+    "238.851bf73f.chunk.js.map": "/vowels/static/js/238.851bf73f.chunk.js.map",
     "787.3beb7f7f.chunk.js.map": "/vowels/static/js/787.3beb7f7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db079e9d.css",
-    "static/js/main.6af75ede.js"
+    "static/js/main.69098798.js"
   ]
 }
