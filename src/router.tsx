@@ -1,5 +1,5 @@
 import {lazy, Suspense} from "react";
-import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Outlet, Route, Routes} from "react-router-dom";
 import {ROUTE_MATCH_FIRST_LETTER} from "constants/route_constants";
 
 const App = lazy(() => import('modules/App'));
@@ -12,8 +12,11 @@ const ContainerRouter = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                     <Route element={<App children={<Outlet/>}/>}>
-                        <Route path={'/'} element={<PrimaryMenu/>}/>
+                        <Route path={'/vowels'} element={<PrimaryMenu/>}/>
                         <Route path={ROUTE_MATCH_FIRST_LETTER} element={<MatchFirstLetter/>}/>
+                    </Route>
+                    <Route path={'*'}>
+                        <Route index element={<Navigate to={'/vowels'} replace/>}/>
                     </Route>
                 </Routes>
             </Suspense>
