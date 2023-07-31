@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/vowels/static/css/main.db079e9d.css",
-    "main.js": "/vowels/static/js/main.4375edbb.js",
+    "main.css": "/vowels/static/css/main.02479a6e.css",
+    "main.js": "/vowels/static/js/main.24a6fbbf.js",
     "static/css/373.b4a7d865.chunk.css": "/vowels/static/css/373.b4a7d865.chunk.css",
     "static/js/373.7155b03e.chunk.js": "/vowels/static/js/373.7155b03e.chunk.js",
-    "static/css/519.adcac25d.chunk.css": "/vowels/static/css/519.adcac25d.chunk.css",
-    "static/js/519.c3ae62a7.chunk.js": "/vowels/static/js/519.c3ae62a7.chunk.js",
-    "static/css/465.f2492c37.chunk.css": "/vowels/static/css/465.f2492c37.chunk.css",
-    "static/js/465.fcc2f0a8.chunk.js": "/vowels/static/js/465.fcc2f0a8.chunk.js",
+    "static/css/519.e9b13713.chunk.css": "/vowels/static/css/519.e9b13713.chunk.css",
+    "static/js/519.570f1f47.chunk.js": "/vowels/static/js/519.570f1f47.chunk.js",
+    "static/css/465.a896f077.chunk.css": "/vowels/static/css/465.a896f077.chunk.css",
+    "static/js/465.145f7708.chunk.js": "/vowels/static/js/465.145f7708.chunk.js",
     "static/js/787.3beb7f7f.chunk.js": "/vowels/static/js/787.3beb7f7f.chunk.js",
     "service-worker.js": "/vowels/service-worker.js",
     "index.html": "/vowels/index.html",
-    "main.db079e9d.css.map": "/vowels/static/css/main.db079e9d.css.map",
-    "main.4375edbb.js.map": "/vowels/static/js/main.4375edbb.js.map",
+    "main.02479a6e.css.map": "/vowels/static/css/main.02479a6e.css.map",
+    "main.24a6fbbf.js.map": "/vowels/static/js/main.24a6fbbf.js.map",
     "373.b4a7d865.chunk.css.map": "/vowels/static/css/373.b4a7d865.chunk.css.map",
     "373.7155b03e.chunk.js.map": "/vowels/static/js/373.7155b03e.chunk.js.map",
-    "519.adcac25d.chunk.css.map": "/vowels/static/css/519.adcac25d.chunk.css.map",
-    "519.c3ae62a7.chunk.js.map": "/vowels/static/js/519.c3ae62a7.chunk.js.map",
-    "465.f2492c37.chunk.css.map": "/vowels/static/css/465.f2492c37.chunk.css.map",
-    "465.fcc2f0a8.chunk.js.map": "/vowels/static/js/465.fcc2f0a8.chunk.js.map",
+    "519.e9b13713.chunk.css.map": "/vowels/static/css/519.e9b13713.chunk.css.map",
+    "519.570f1f47.chunk.js.map": "/vowels/static/js/519.570f1f47.chunk.js.map",
+    "465.a896f077.chunk.css.map": "/vowels/static/css/465.a896f077.chunk.css.map",
+    "465.145f7708.chunk.js.map": "/vowels/static/js/465.145f7708.chunk.js.map",
     "787.3beb7f7f.chunk.js.map": "/vowels/static/js/787.3beb7f7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db079e9d.css",
-    "static/js/main.4375edbb.js"
+    "static/css/main.02479a6e.css",
+    "static/js/main.24a6fbbf.js"
   ]
 }
