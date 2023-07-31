@@ -4,8 +4,13 @@ export const useSpeech = (handleSpeechEnd?: () => void) => {
 
     const [voice, setVoice] = useState<SpeechSynthesisUtterance>();
     const [synth, setSynth] = useState<SpeechSynthesis>();
+    const [errorSupportSpeech, setErrorSupportSpeech] = useState<boolean>(false)
 
     useEffect(() => {
+        if (!('speechSynthesis' in window)) {
+            setErrorSupportSpeech(true);
+            return
+        }
         const voiceInitial = new SpeechSynthesisUtterance();
         handleSpeechEnd && voiceInitial.addEventListener('end', handleSpeechEnd);
         const synthInitial = speechSynthesis;
@@ -29,5 +34,5 @@ export const useSpeech = (handleSpeechEnd?: () => void) => {
     }
     // @ts-ignore
     window.handleSpeech = handleSpeech;
-    return {handleSpeech}
+    return {handleSpeech, onLoad: voice, errorSupportSpeech}
 }

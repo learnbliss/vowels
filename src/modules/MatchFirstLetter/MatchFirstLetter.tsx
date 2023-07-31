@@ -34,10 +34,6 @@ const MatchFirstLetter: React.FC = () => {
         }
     }
 
-    useEffect(() => {
-
-    }, []); //eslint-disable-line
-
     return (
         <div className={styles.matchFirstLetter}>
             <div className={styles.vowelsWrapper}>
