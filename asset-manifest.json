@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vowels/static/css/main.db079e9d.css",
-    "main.js": "/vowels/static/js/main.d59e30f3.js",
+    "main.js": "/vowels/static/js/main.f0e187c8.js",
     "static/css/373.b4a7d865.chunk.css": "/vowels/static/css/373.b4a7d865.chunk.css",
     "static/js/373.7155b03e.chunk.js": "/vowels/static/js/373.7155b03e.chunk.js",
     "static/css/519.adcac25d.chunk.css": "/vowels/static/css/519.adcac25d.chunk.css",
@@ -12,7 +12,7 @@
     "service-worker.js": "/vowels/service-worker.js",
     "index.html": "/vowels/index.html",
     "main.db079e9d.css.map": "/vowels/static/css/main.db079e9d.css.map",
-    "main.d59e30f3.js.map": "/vowels/static/js/main.d59e30f3.js.map",
+    "main.f0e187c8.js.map": "/vowels/static/js/main.f0e187c8.js.map",
     "373.b4a7d865.chunk.css.map": "/vowels/static/css/373.b4a7d865.chunk.css.map",
     "373.7155b03e.chunk.js.map": "/vowels/static/js/373.7155b03e.chunk.js.map",
     "519.adcac25d.chunk.css.map": "/vowels/static/css/519.adcac25d.chunk.css.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.db079e9d.css",
-    "static/js/main.d59e30f3.js"
+    "static/js/main.f0e187c8.js"
   ]
 }
