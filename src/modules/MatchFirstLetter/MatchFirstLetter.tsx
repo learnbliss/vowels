@@ -31,7 +31,7 @@ const MatchFirstLetter: React.FC = () => {
             dispatch(setTargetWord(''))
             dispatch(setRightAnswerLetter(targetLetter))
         } else {
-            handleSpeech(`${vowelLetter}, неправильно`)
+            handleSpeech(`${vowelLetter.toUpperCase()}! ;неправильно`)
         }
     }
 
