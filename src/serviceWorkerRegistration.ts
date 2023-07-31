@@ -96,9 +96,9 @@ function registerValidSW(swUrl: string, config?: Config) {
           }
         };
       };
-      if (registration.waiting) {
-        window.location.reload();
-      }
+      // if (registration.waiting) {
+      //   window.location.reload();
+      // }
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
