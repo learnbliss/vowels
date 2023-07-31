@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkvowels=self.webpackChunkvowels||[]).push([[373],{373:function(e,n,r){r.r(n),r.d(n,{default:function(){return i}});r(791);var s="App_primaryContainer__Ho42U",a="App_secondaryContainer__Hfezx",c=r(184),i=function(e){var n=e.children;return(0,c.jsx)("div",{className:s,children:(0,c.jsx)("div",{className:a,children:n})})}}}]);
-//# sourceMappingURL=373.1a369e72.chunk.js.map
