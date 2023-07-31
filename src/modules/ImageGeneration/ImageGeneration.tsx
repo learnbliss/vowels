@@ -9,6 +9,7 @@ import {useAppDispatch, useAppSelector} from "redux/hooks";
 import {setRightAnswerLetter, setTargetWord} from "core/matchFirstLetter/matchFirstLetterSlice";
 import {matchFirstLetterSelector} from "core/matchFirstLetter/matchFirstLetterSelectors";
 import {useSpeech} from "hooks/useSpeech";
+import ErrorLoadImage from "modules/ErrorLoadImage";
 
 const ImageGeneration: FC = () => {
     const dispatch = useAppDispatch();
@@ -25,17 +26,18 @@ const ImageGeneration: FC = () => {
         // const words = {eng: 'donkey', ru: 'ослик'}; //для теста конкретного слова
         setIsLoading(true)
         setOutput(undefined)
+        setError(false)
         try {
             const response = await fetchImageFromWord(words.eng)
-            setError(false)
             setIsLoading(false);
             setOutput(response);
-            const word = words.ru;
-            dispatch(setTargetWord(word))
         } catch (e) {
             setIsLoading(false);
             setError(true)
             console.error('fetchImageFromWord, ошибка загрузки изображения')
+        } finally {
+            const word = words.ru;
+            dispatch(setTargetWord(word))
         }
     }
 
@@ -51,14 +53,12 @@ const ImageGeneration: FC = () => {
         <>
             <div className={styles.resultImage}>
                 {isLoading && <Loader/>}
-                {output && <>
-                    <div className={styles.imgName}>{imgName}</div>
-                    <img onClick={() => handleSpeech(targetWord)} className={styles.img} src={output} alt="art"/>
-                </>}
-                {error && <div>Ошибка загрузки, возможно не работает интернет</div>}
+                <div className={styles.imgName}>{isLoading ? null : imgName}</div>
+                {!isLoading && <img onClick={() => handleSpeech(targetWord)} className={styles.img} src={output} alt="art"/>}
+                {error && <ErrorLoadImage/>}
             </div>
             <div onClick={handleGetImage} className={styles.arrowWrapper}>
-               <Arrow/>
+                <Arrow/>
             </div>
             {isLoading && <div className={styles.block}/>}
         </>
