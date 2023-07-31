@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/vowels/static/css/main.db079e9d.css",
-    "main.js": "/vowels/static/js/main.747fedd0.js",
+    "main.js": "/vowels/static/js/main.2759abe9.js",
     "static/css/373.b4a7d865.chunk.css": "/vowels/static/css/373.b4a7d865.chunk.css",
     "static/js/373.1a369e72.chunk.js": "/vowels/static/js/373.1a369e72.chunk.js",
     "static/css/519.bcc28c13.chunk.css": "/vowels/static/css/519.bcc28c13.chunk.css",
     "static/js/519.4e402967.chunk.js": "/vowels/static/js/519.4e402967.chunk.js",
-    "static/css/465.7fa3748a.chunk.css": "/vowels/static/css/465.7fa3748a.chunk.css",
-    "static/js/465.044be4fc.chunk.js": "/vowels/static/js/465.044be4fc.chunk.js",
+    "static/css/354.08173a49.chunk.css": "/vowels/static/css/354.08173a49.chunk.css",
+    "static/js/354.d8e66a2c.chunk.js": "/vowels/static/js/354.d8e66a2c.chunk.js",
     "static/js/787.3beb7f7f.chunk.js": "/vowels/static/js/787.3beb7f7f.chunk.js",
     "service-worker.js": "/vowels/service-worker.js",
     "index.html": "/vowels/index.html",
     "main.db079e9d.css.map": "/vowels/static/css/main.db079e9d.css.map",
-    "main.747fedd0.js.map": "/vowels/static/js/main.747fedd0.js.map",
+    "main.2759abe9.js.map": "/vowels/static/js/main.2759abe9.js.map",
     "373.b4a7d865.chunk.css.map": "/vowels/static/css/373.b4a7d865.chunk.css.map",
     "373.1a369e72.chunk.js.map": "/vowels/static/js/373.1a369e72.chunk.js.map",
     "519.bcc28c13.chunk.css.map": "/vowels/static/css/519.bcc28c13.chunk.css.map",
     "519.4e402967.chunk.js.map": "/vowels/static/js/519.4e402967.chunk.js.map",
-    "465.7fa3748a.chunk.css.map": "/vowels/static/css/465.7fa3748a.chunk.css.map",
-    "465.044be4fc.chunk.js.map": "/vowels/static/js/465.044be4fc.chunk.js.map",
+    "354.08173a49.chunk.css.map": "/vowels/static/css/354.08173a49.chunk.css.map",
+    "354.d8e66a2c.chunk.js.map": "/vowels/static/js/354.d8e66a2c.chunk.js.map",
     "787.3beb7f7f.chunk.js.map": "/vowels/static/js/787.3beb7f7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db079e9d.css",
-    "static/js/main.747fedd0.js"
+    "static/js/main.2759abe9.js"
   ]
 }
